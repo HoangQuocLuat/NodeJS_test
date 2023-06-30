@@ -10,6 +10,9 @@ app.use(helmet())
 app.use(compression())
 
 // init db
+require('./dbs/init.mySQL')
+
+// init router
 app.get('/', (req, res, next) => {
     const strCompression = 'Hello Factipjs'
     return res.status(200).json({
@@ -17,7 +20,6 @@ app.get('/', (req, res, next) => {
         metadata: strCompression.repeat(10000)
     })
 })
-// init router
 
 // handling error
 module.exports = app
