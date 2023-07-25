@@ -1,0 +1,9 @@
+@url = http://localhost:3052/v1/api/
+
+POST http://localhost:3052/v1/api/user/signup
+####
+
+POST {{url}}/user/signup
+
+###
+GET {{url}}/user/getUsers
