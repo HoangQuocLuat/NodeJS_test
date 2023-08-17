@@ -9,11 +9,12 @@ const RoleUser = {
 class AccessService {
     static signUp = async ({name, email, password}) => {
         try{
+            //step 1: check email exists ?
             const holderUser = await userModel.findOne({email}).lean()
             if(holderUser) {
                 return {
                     code: 'xxxx',
-                    message: 'người dùng đã tồn tại'
+                    message: 'người dùng đã tồn tại',
                 }
             }
 

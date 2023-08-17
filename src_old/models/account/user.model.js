@@ -6,6 +6,3 @@ const userLogin = (userLogin) => {
     this.password = userLogin.password
 }
 
-userLogin.login() = () => {
-    
-}
